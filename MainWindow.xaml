@@ -1,0 +1,223 @@
+﻿<Window x:Class="Kanban_Board.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kanban_Board"
+        mc:Ignorable="d"
+        Title="Kanban Board" Height="500" Width="1150" MinHeight="350" MinWidth="850">
+    
+    <Grid Background="#2E2E2E">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="Black" BorderBrush="White" Margin="4"
+                BorderThickness="1" CornerRadius="7">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <Canvas Grid.Row="0" Height="75">
+                    <Ellipse Width="20" Height="20" Stroke="Green" Fill="#2E2E2E" StrokeThickness="2"
+                            HorizontalAlignment="Left" Margin="15,15"/>
+
+                    <TextBlock Text="Todo" Foreground="White" FontWeight="Bold" Background="Black"
+                               FontSize="21" Width="50" Height="30" HorizontalAlignment="Left" Margin="45,10,0,0"/>
+
+                    <TextBlock Text="This item hasn't been started" Foreground="#BABABA" FontSize="16"
+                               Width="250" Height="25" HorizontalAlignment="Left" Margin="19,42,0,0"/>
+                </Canvas>
+
+                <StackPanel Grid.Row="2">
+                    <Button Height="43" Foreground="#BABABA" Background="Black" BorderBrush="Black"
+                            HorizontalContentAlignment="Left" FontSize="16" Cursor="Hand">
+
+                        <TextBlock Margin="15,-9,0,0">
+                            <Span FontSize="27">+</Span>
+                            <Span FontSize="17">Add item</Span>
+                        </TextBlock>
+
+                        <Button.ToolTip>
+                            <ToolTip Foreground="White" Background="#191919" BorderBrush="White"
+                                     BorderThickness="1" Content="Add item"/>
+                        </Button.ToolTip>
+
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </Button.Resources>
+
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border x:Name="Butten" Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="#191919" TargetName="Butten" />
+                                                </Trigger>
+                                                
+                                                <Trigger Property="IsMouseCaptured" Value="True">
+                                                    <Setter Property="Background" Value="#404040" TargetName="Butten" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        
+                    </Button>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" Background="Black" BorderBrush="White" Margin="4"
+                BorderThickness="1" CornerRadius="7">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Canvas Grid.Row="0" Height="75">
+                    <Ellipse Width="20" Height="20" Stroke="Red" Fill="#2E2E2E" StrokeThickness="2"
+                             HorizontalAlignment="Left" Margin="15,15"/>
+
+                    <TextBlock Text="In Progress" Foreground="White" FontWeight="Bold" Background="Black"
+                               FontSize="21" Width="115" Height="30" HorizontalAlignment="Left" Margin="45,10,0,0"/>
+
+                    <TextBlock Text="This is actively being worked on" Foreground="#BABABA" FontSize="16"
+                               Width="250" Height="25" HorizontalAlignment="Left" Margin="19,42,0,0"/>
+                </Canvas>
+
+                <StackPanel Grid.Row="2">
+                    <Button Height="43" Foreground="#BABABA" Background="Black" BorderBrush="Black"
+                                        HorizontalContentAlignment="Left" FontSize="16" Cursor="Hand">
+
+                        <TextBlock Margin="15,-9,0,0">
+                            <Span FontSize="27">+</Span>
+                            <Span FontSize="17">Add item</Span>
+                        </TextBlock>
+
+                        <Button.ToolTip>
+                            <ToolTip Foreground="White" Background="#191919" BorderBrush="White"
+                                     BorderThickness="1" Content="Add item"/>
+                        </Button.ToolTip>
+
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </Button.Resources>
+
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border x:Name="Butten" Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="#191919" TargetName="Butten" />
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseCaptured" Value="True">
+                                                    <Setter Property="Background" Value="#404040" TargetName="Butten" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="2" Background="Black" BorderBrush="White" Margin="4"
+                BorderThickness="1" CornerRadius="7">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Canvas Grid.Row="0" Height="75">
+                    <Ellipse Width="20" Height="20" Stroke="Blue" Fill="#2E2E2E" StrokeThickness="2"
+                             HorizontalAlignment="Left" Margin="15,15"/>
+
+                    <TextBlock Text="Done" Foreground="White" FontWeight="Bold" Background="Black"
+                               FontSize="21" Width="115" Height="30" HorizontalAlignment="Left" Margin="45,10,0,0"/>
+
+                    <TextBlock Text="This has been completed" Foreground="#BABABA" FontSize="16"
+                               Width="250" Height="25" HorizontalAlignment="Left" Margin="19,42,0,0"/>
+                </Canvas>
+
+                <StackPanel Grid.Row="2">
+                    <Button Height="43" Foreground="#BABABA" Background="Black" BorderBrush="Black"
+                            HorizontalContentAlignment="Left" FontSize="16" Cursor="Hand">
+
+                        <TextBlock Margin="15,-9,0,0">
+                            <Span FontSize="27">+</Span>
+                            <Span FontSize="17">Add item</Span>
+                        </TextBlock>
+
+                        <Button.ToolTip>
+                            <ToolTip Foreground="White" Background="#191919" BorderBrush="White"
+                                     BorderThickness="1" Content="Add item"/>
+                        </Button.ToolTip>
+
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </Button.Resources>
+                        
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border x:Name="Butten" Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="#191919" TargetName="Butten" />
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseCaptureWithin" Value="True">
+                                                    <Setter Property="Background" Value="#404040" TargetName="Butten" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+        
+    </Grid>
+</Window>
