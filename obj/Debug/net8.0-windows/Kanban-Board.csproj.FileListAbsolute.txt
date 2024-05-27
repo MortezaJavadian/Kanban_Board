@@ -6,6 +6,7 @@ D:\practice\Kanban-Board\bin\Debug\net8.0-windows\Kanban-Board.pdb
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\App.g.cs
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board_MarkupCompile.cache
+D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board_MarkupCompile.lref
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\MainWindow.baml
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board.g.resources
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,4 +18,3 @@ D:\practice\Kanban-Board\obj\Debug\net8.0-windows\refint\Kanban-Board.dll
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board.pdb
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board.genruntimeconfig.cache
 D:\practice\Kanban-Board\obj\Debug\net8.0-windows\ref\Kanban-Board.dll
-D:\practice\Kanban-Board\obj\Debug\net8.0-windows\Kanban-Board_MarkupCompile.lref
